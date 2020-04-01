@@ -1,0 +1,238 @@
+.portfolio {
+  scroll-margin-top: 50px;
+}
+
+.portfolio__wrapper {
+  // min-height: 869px;
+
+  background-color: #2d303a;
+  border-bottom: 6px solid #323746;
+
+  // @include media-desktop {
+    // max-height: calc(((100vw - 120px)/3)*4 + 250px);
+    // height: 143.5vw;
+  // }
+
+  // @include media-tablet {
+    // max-height: calc(((100vw - 74px)/2)*4 + 450px);
+    // max-height: 2000px;
+    // height: 225vw;
+  // }
+
+  @include media-tablet {
+    padding-right: 25px;
+    padding-left: 25px;
+
+    border-bottom: 0;
+  }
+}
+
+.portfolio__title {
+  font-size: 30px;
+  padding-top: 60px;
+  padding-left: 10px;
+
+  @include media-tablet {
+    padding-top: 42px;
+    padding-left: 5px;
+
+    letter-spacing: -0.016em;
+  }
+}
+
+.portfolio__description {
+  margin: 0;
+  padding-top: 21px;
+  padding-left: 10px;
+
+  font-size: 18px;
+  font-weight: 300;
+  font-family: "Lato-Light", "Arial", sans-serif;
+  color: #767e9e;
+  text-align: justify;
+  letter-spacing: 0.01em;
+
+  @include media-desktop {
+    padding-top: 17px;
+    padding-right: 50px;
+
+    line-height: 30px;
+    letter-spacing: 0;
+  }
+
+  @include media-tablet {
+    padding-right: 10px;
+    padding-left: 5px;
+
+    text-align: left;
+    letter-spacing: 0.005em;
+  }
+}
+
+.tags__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+
+  padding-left: 11px;
+  padding-top: 16px;
+  padding-bottom: 12px;
+
+  user-select: none;
+
+  @include media-desktop {
+    padding-top: 12px;
+  }
+
+  @include media-tablet {
+    padding-top: 14px;
+    padding-left: 5px;
+  }
+}
+
+.tags__item {
+  margin-right: 10px;
+
+  @include media-mobile {
+    margin-bottom: 10px;
+  }
+}
+
+.tags__button {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  min-height: 22px;
+
+  font-size: 12px;
+  font-weight: 400;
+  font-family: "Lato-Regular", "Arial", sans-serif;
+  color: #767e9e;
+  letter-spacing: -0.005em;
+  line-height: 18px;
+  white-space: nowrap;
+
+  background-color: transparent;
+  border: 1px solid #767e9e;
+  border-radius: 5px;
+
+  &:focus,
+  &:hover,
+  &:active {
+    color: #dedede;
+
+    background-color: #5f9ea0;
+    border-color: #5f9ea0;
+    outline: none;
+
+    cursor: pointer;
+
+    @include transition(500ms);
+  }
+}
+
+.tags__item:first-of-type .tags__button {
+  padding-right: 7px;
+}
+
+.tags__button_active,
+.tags__button_active:focus,
+.tags__button_active:hover,
+.tags__button_active:active {
+  color: #dedede;
+
+  background-color: transparent;
+  border: 1px solid #dedede;
+}
+
+.portfolio__images {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 20px 1fr 20px 1fr;
+  -ms-grid-columns: 1fr 10px 1fr 10px 1fr 10px 1fr;
+      grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
+  grid-column-gap: 15px;
+  grid-row-gap: 20px;
+
+  max-height: 601px;
+  margin-bottom: 63px;
+  padding: 5px 5px 5px 10px;
+
+  overflow: hidden;
+  user-select: none;
+
+  @include media-desktop {
+    grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr 1fr;
+    grid-gap: 20px;
+
+    max-height: calc(((100vw - 120px)/3)*4 + 130px);
+    margin-top: 10px;
+    margin-bottom: 56px;
+    padding: 7px 10px 11px 10px;
+  }
+
+  @include media-tablet {
+    grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr;
+    grid-column-gap: 13px;
+    grid-row-gap: 14px;
+
+    max-height: 2000px;
+    margin-top: 8px;
+    margin-bottom: 0;
+    padding: 5px 5px 42px 5px;
+  }
+}
+
+.images__item {
+  font-size: 0;
+
+  &:nth-child(n + 13) {
+    display: none;
+  }
+
+  @include media-tablet {
+    &:nth-child(n + 9) {
+      display: none;
+    }
+  }
+}
+
+.portfolio__image {
+  width: 220px;
+  height: 187px;
+
+  &:focus,
+  &:hover {
+    outline: 5px solid #5f9ea0;
+
+    cursor: pointer;
+
+    // @include media-tablet {
+    //   outline: 5px inset #5f9ea0;
+    // }
+  }
+
+  @include media-desktop {
+    width: calc((100vw - 120px)/3);
+    height: 100%;
+  }
+
+  @include media-tablet {
+    width: calc((100vw - 74px)/2);
+    // height: 100%;
+  }
+}
+
+.portfolio__image_active,
+.portfolio__image_active:focus,
+.portfolio__image_active:hover {
+  outline: 5px solid #F06C64;
+
+  @include transition;
+
+  // @include media-tablet {
+  //   box-sizing: border-box;
+  //   border: 5px solid #F06C64;
+  //   outline: none;
+  // }
+}

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Singolo DOM | Singolo Responsive</title>
+    <link rel="shortcut icon" type="image/png" href="./assets/favicon/favicon.png">
+  <link href="style.css?ca8b5aa36791498a5a2e" rel="stylesheet"></head>
+
+  <body class="main-page">
+    <button id="burger" class="burger__button button"></button>
+    <header class="header">
+      <div class="header__wrapper wrapper">
+        <h1 class="logo">
+          <a class="logo__link link" href="#">
+            <span class="logo__title">
+              singolo<span class="logo__title logo__title_red">*</span>
+            </span>
+          </a>
+        </h1>
+        <nav id="navigation" class="navigation">
+          <ul id="mainNavigation" class="navigation__list list">
+            <li class="navigation__item">
+              <a class="navigation__link link" href="#">home</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link link" href="#services">services</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link link" href="#portfolio">portfolio</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link link" href="#about">about</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link link" href="#feedback">contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="slider" data-navigation="#">
+      <h2 class="visually-hidden">Our portfolio</h2>
+      <div class="slider__wrapper wrapper">
+        <div class="button__container button__container_left">
+          <button class="button slider__button slider__button_previous">
+            <span class="slider__button-icon"></span>
+          </button>
+        </div>
+
+        <div class="gallery">
+          <div class="slider__item slider__active">
+            <div class="gallery__wrapper">
+              <div class="gallery__container gallery__container_left">
+                <img class="gallery__item gallery__item_left"
+                  src="assets/img/d1bedfe80df703a1bec40c0f4f8f5336.png" alt="Vertical design. Display"
+                  data-class="gallery__item_left" tabindex="0">
+              </div>
+              <div class="gallery__container gallery__container_right">
+                <img class="gallery__item gallery__item_right"
+                  src="assets/img/059d02588f3ff0d3261830a4a9031e8d.png" alt="Horizontal design. Display"
+                  data-class="gallery__item_right" tabindex="0">
+              </div>
+            </div>
+          </div>
+
+          <div class="slider__item slider__item_slide2">
+            <div class="gallery__container gallery__container_slide2">
+              <img class="gallery__item gallery__item_slide2"
+                src="assets/img/838ce9ac4add2df470dd4e36038a5f68.png" alt="Vertical design. Phones">
+            </div>
+          </div>
+        </div>
+
+        <div class="button__container button__container_right">
+          <button class="button slider__button slider__button_next">
+            <span class="slider__button-icon"></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="services" data-navigation="#services">
+      <div class="services__wrapper wrapper">
+        <h2 class="services__title title">Our Services</h2>
+        <p class="services__description">
+          Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
+        </p>
+        <ul class="features__list list">
+          <li class="feature__item feature_design">
+            <h3 class="feature__title title">Custom Design</h3>
+            <p class="feature__description feature__description_design">
+              Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.
+            </p>
+          </li>
+          <li class="feature__item feature_ideas">
+            <h3 class="feature__title title">Inovative Ideas</h3>
+            <p class="feature__description feature__description_ideas">
+              Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.
+            </p>
+          </li>
+          <li class="feature__item feature_answer">
+            <h3 class="feature__title title">Love Is The Answer</h3>
+            <p class="feature__description feature__description_answer">
+              Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.
+            </p>
+          </li>
+          <li class="feature__item feature_layout">
+            <h3 class="feature__title title">Responsive Layout</h3>
+            <p class="feature__description feature__description_layout">
+              Sed porttitor placerat rhoncus. In at nunc tellus. Maecenas blandit nunc ligula. Praesent elit leo.
+            </p>
+          </li>
+          <li class="feature__item feature_support">
+            <h3 class="feature__title title">24 / 7 Support</h3>
+            <p class="feature__description feature__description_support">
+              Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. Nulla a sem erat. Pellentesque egestas venenatis lorem .
+            </p>
+          </li>
+          <li class="feature__item feature_star">
+            <h3 class="feature__title title">Feel Like A Star</h3>
+            <p class="feature__description feature__description_star">
+              Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="portfolio" class="portfolio" data-navigation="#portfolio">
+      <div class="portfolio__wrapper wrapper">
+        <h2 class="portfolio__title title">Portfolio</h2>
+        <p class="portfolio__description">
+          Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
+        </p>
+        <ul id="tagsList" class="tags__list list">
+          <li class="tags__item">
+            <button class="tags__button tags__button_active">All</button>
+          </li>
+          <li class="tags__item">
+            <button class="tags__button">Web Design</button>
+          </li>
+          <li class="tags__item">
+            <button class="tags__button">Graphic Design</button>
+          </li>
+          <li class="tags__item">
+            <button class="tags__button">Artwork</button>
+          </li>
+        </ul>
+        <ul id="portfolioImages" class="portfolio__images list">
+          <li class="images__item">
+            <img src="assets/img/03b734ff53bca2eeb1899dfb6f8c1f91.png" width="220" height="187"
+              alt="Portfolio example №1" class="portfolio__image" tabindex="0">
+          </li>
+          <li class="images__item">
+            <img src="assets/img/28d243a9fbd05729483a029cba6ee9b6.png" width="220" height="187"
+              alt="Portfolio example №2" class="portfolio__image" tabindex="0">
+          <li class="images__item">
+            <img src="assets/img/98d696486a6b089b53336534b6910827.png" width="220" height="187"
+              alt="Portfolio example №3" class="portfolio__image" tabindex="0">
+          </li>
+          <li class="images__item">
+            <img src="assets/img/a34ef3e08453c55ab0d20deba9db0bda.png" width="220" height="187"
+              alt="Portfolio example №4" class="portfolio__image" tabindex="0">
+          </li>
+          <li class="images__item">
+            <img src="assets/img/7cbe8a981960febf4ab1217da2a7ec8c.png" width="220" height="187"
+              alt="Portfolio example №5" class="portfolio__image" tabindex="0">
+          </li>
+          <li class="images__item">
+            <img src="assets/img/dd05432300446187ee66d9f5fcebac40.png" width="220" height="187"
+              alt="Portfolio example №6" class="portfolio__image" tabindex="0">
+          </li>
+          <li class="images__item">
+            <img src="assets/img/6aeb7d540c43d4a5eb14ce8fd88f472e.png" width="220" height="187"
+              alt="Portfolio example №7" class="portfolio__image" tabindex="0">
+          </li>
+          <li class="images__item">
+            <img src="assets/img/36a47c865d59042fdff4c62194a817d3.png" width="220" height="187"
+              alt="Portfolio example №8" class="portfolio__image" tabindex="0">
+          </li>
+          <li class="images__item">
+            <img src="assets/img/45896a141ccb51b530dd443c91334dd0.png" width="220" height="187"
+              alt="Portfolio example №9" class="portfolio__image" tabindex="0">
+          </li>
+          <li class="images__item">
+            <img src="assets/img/dca4a2ca116a88ebf85c10103ffe5949.png" width="220" height="187"
+              alt="Portfolio example №10" class="portfolio__image" tabindex="0">
+          </li>
+          <li class="images__item">
+            <img src="assets/img/f6b082370c4d0978c8af19519ceae9a0.png" width="220" height="187"
+              alt="Portfolio example №11" class="portfolio__image" tabindex="0">
+          </li>
+          <li class="images__item">
+            <img src="assets/img/63500c5d3f6b461e941a93acd06b0123.png" width="220" height="187"
+              alt="Portfolio example №12" class="portfolio__image" tabindex="0">
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="about" class="about" data-navigation="#about">
+      <div class="about__wrapper wrapper">
+        <h2 class="about__title title">About Us</h2>
+        <p class="about__description">
+          Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor
+          ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
+        </p>
+        <div class="cards">
+          <div class="card">
+            <img class="card__avatar card__avatar_jensen"
+              src="assets/img/a34e9d859704d050dc0a8fc236ad313c.png" width="300" height="300" alt="Adam Jensen photo">
+            <h3 class="card__title title">Adam Jensen</h3>
+            <p class="card__description">
+              Quisque luctus, quam eget molestie commodo, lacus purus
+              <span class="card__sentence">cursus purus, nec rutrum tellus dolor id lorem.</span>
+            </p>
+            <ul class="card__social list">
+              <li class="social__item">
+                <a class="social__link social__link_facebook link" href="#"></a>
+              </li>
+              <li class="social__item">
+                <a class="social__link social__link_google link" href="#"></a>
+              </li>
+              <li class="social__item">
+                <a class="social__link social__link_twitter link" href="#"></a>
+              </li>
+              <li class="social__item">
+                <a class="social__link social__link_linkedin link" href="#"></a>
+              </li>
+            </ul>
+          </div>
+          <div class="card card_second">
+            <img class="card__avatar card__avatar_miles"
+              src="assets/img/eb180db8de846113d77d703e79c24456.png" width="300" height="300" alt="Desmond Miles photo">
+            <h3 class="card__title title">Desmond Miles</h3>
+            <p class="card__description">
+              Curabitur vestibulum eget mauris quis laoreet. Phasellus
+              <span class="card__sentence">in quam laoreet, viverra lacus ut, ultrices velit.</span>
+            </p>
+            <ul class="card__social list">
+              <li class="social__item">
+                <a class="social__link social__link_facebook link" href="#"></a>
+              </li>
+              <li class="social__item">
+                <a class="social__link social__link_google link" href="#"></a>
+              </li>
+              <li class="social__item">
+                <a class="social__link social__link_twitter link" href="#"></a>
+              </li>
+              <li class="social__item">
+                <a class="social__link social__link_linkedin link" href="#"></a>
+              </li>
+            </ul>
+          </div>
+          <div class="card card_third">
+            <img class="card__avatar card__avatar_visari"
+              src="assets/img/e969a988a2aee8a0890ac1426c0785c6.png" width="300" height="300" alt="Scolara Visari photo">
+            <h3 class="card__title title">Scolara Visari</h3>
+            <p class="card__description">
+              Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet
+              <span class="card__sentence">turpis, et consequat felis. Quisque condimentum.</span>
+            </p>
+            <ul class="card__social list">
+              <li class="social__item">
+                <a class="social__link social__link_facebook link" href="#"></a>
+              </li>
+              <li class="social__item">
+                <a class="social__link social__link_google link" href="#"></a>
+              </li>
+              <li class="social__item">
+                <a class="social__link social__link_twitter link" href="#"></a>
+              </li>
+              <li class="social__item">
+                <a class="social__link social__link_linkedin link" href="#"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="feedback" class="feedback" data-navigation="#feedback">
+      <div class="feedback__wrapper wrapper">
+        <h2 class="feedback__title title">Get a Quote</h2>
+        <p class="feedback__description">
+          Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
+        </p>
+        <div class="two-columns-layout">
+          <form id="feedback__form" class="feedback__form"
+            action="https://www.w3schools.com/action_page.php"
+            method="post" name="feedback" target="_blank">
+            <input class="form__name form__input" type="text" name="name"
+              placeholder="Name (Required)" minlength="2" maxlength="50" required>
+            <input class="form__email form__input" type="email" name="email"
+              placeholder="Email (Required)" required>
+            <input id="form__subject" class="form__subject form__input"
+              maxlength="100" type="text" name="subject" placeholder="Subject">
+            <textarea id="form__message" class="form__message form__input" name="message"
+              maxlength="500" placeholder="Describe your project in detail..."></textarea>
+            <input id="form__submit" class="form__submit form__input" type="submit" value="Send">
+          </form>
+          <div class="feedback__contacts">
+            <h3 class="contacts__title title">Contact Information</h3>
+            <p class="contacts__description">
+              Quisque hendrerit purus dapibus, ornare nibh vitae, viver&shy;ra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.
+            </p>
+            <ul class="contacts__list list">
+              <li class="contacts__item">
+                <span class="contacts__icon contacts__icon_location"></span>
+                <span class="contacts__link contacts__link_location link">Elm St. 14/05 Lost City </span>
+              </li>
+              <li class="contacts__item">
+                <span class="contacts__icon contacts__icon_phone"></span>
+                <a class="contacts__link contacts__link_phone link" href="tel:03528-331-86-53">03528 331 86 53</a>
+              </li>
+              <li class="contacts__item">
+                <span class="contacts__icon contacts__icon_email"></span>
+                <a class="contacts__link contacts__link_email link" href="mailto:info@singolo.com">info@singolo.com</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__wrapper wrapper">
+        <span class="footer__copyright">© Copyright 2013</span>
+        <ul class="footer__social list">
+          <li class="social__item">
+            <a class="social__link social__link_facebook link" href="#"></a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link_google link" href="#"></a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link_twitter link" href="#"></a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link_linkedin link" href="#"></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <template id="popup__template">
+      <div class="popup__layout" tabindex="0">
+        <div class="popup__wrapper">
+          <div class="popup__description">
+            <p class="popup__status"></p><hr>
+            <p class="popup__subject">
+              <span class="popup__lead">Subject:</span>
+              <span class="popup__lead_subject"></span>
+            </p><hr>
+            <p class="popup__message">
+              <span class="popup__lead">Description:</span>
+              <span class="popup__lead_message"></span>
+            </p><hr>
+          </div>
+          <button class="popup__close-button">OK</button>
+        </div>
+      </div>
+    </template>
+
+    <template id="burger__template">
+      <div class="burger__layout" tabindex="0">
+        <div class="burger__wrapper">
+        </div>
+      </div>
+    </template>
+
+  <script type="text/javascript" src="./script.js?ca8b5aa36791498a5a2e"></script></body>
+</html>

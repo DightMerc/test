@@ -1,0 +1,327 @@
+.slider__wrapper {
+  position: relative;
+
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  max-height: 600px;
+  padding: 0;
+
+  user-select: none;
+
+  @include media-tablet {
+    min-height: 452px;
+    height: 452px;
+    min-height: 58%;
+    height: 58%;
+  }
+}
+
+.button__container {
+  position: absolute;
+
+  display: flex;
+  align-items: center;
+  width: 7%; //60px
+  height: 100%;
+
+  z-index: 7;
+
+  @include media-tablet {
+    width: 10.7%;
+    min-width: 40px;
+  }
+}
+
+.button__container_right {
+  top: 0;
+  right: 0;
+}
+
+.slider__button {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  background-color: transparent;
+
+  &:focus,
+  &:hover {
+    outline: none;
+    .slider__button-icon {
+      background-color: #dedede;
+
+      box-shadow: 1px 1px 10px 4px #dedede;
+
+      @include media-tablet {
+        transform: scale(0.8);
+      }
+
+    }
+  }
+}
+
+.slider__button-icon {
+  position: relative;
+  left: 40%; //30px;
+
+  display: block;
+  width: 40px;
+  height: 40px;
+
+  background-image: url('../assets/img/slider/slider-button.png');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+
+  border-radius: 50%;
+
+  @include transition;
+
+  @include media-desktop {
+    left: 30%;
+  }
+
+  @include media-tablet {
+    left: 0%;
+  }
+}
+
+.slider__button_next {
+  left: -28px;
+  bottom: 5px;
+
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.gallery {
+  position: relative;
+
+  overflow: hidden;
+}
+
+.gallery__wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  width: 78%;
+  margin: 0 auto;
+  padding-top: 5.3%;
+}
+
+.gallery__container_left {
+  position: relative;
+
+  width: 30.2%;
+
+  background: url('../assets/img/slider/phone-vertical.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @include media-tablet {
+    width: 30.5%;
+  }
+}
+
+.gallery__item_left {
+  position: absolute;
+
+  width: 78.2%;
+  padding-top: 27%;
+  padding-left: 6%;
+  padding-right: 6%;
+  padding-bottom: 25%;
+
+  border-radius: 26px;
+  border: 1px solid blue;
+
+  z-index: 3;
+
+  @include transition;
+}
+
+.gallery__container_right {
+  width: 60.7%;
+  margin-top: 15.5%;
+
+  background: url('../assets/img/slider/phone-horizontal.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.gallery__item_right {
+  width: 69%;
+  padding-top: 2.6%;
+  padding-right: 13.2%;
+  padding-bottom: 3%;
+  padding-left: 12.2%;
+
+  border-radius: 26px;
+  border: 1px solid blue;
+
+  z-index: 3;
+
+  @include transition;
+}
+
+.gallery__container_slide2 {
+  font-size: 0;
+}
+
+.gallery__item_slide2 {
+  // display: block;
+  width: 100%;
+}
+
+.display-off {
+  opacity: 0;
+}
+
+.gallery__item_left,
+.gallery__item_right {
+  cursor: pointer;
+}
+
+.gallery__item_left:focus,
+.gallery__item_left:hover,
+.gallery__item_left:active,
+.gallery__item_right:focus,
+.gallery__item_right:hover,
+.gallery__item_right:active {
+  outline: none;
+  box-shadow: 1px 1px 10px 4px #dbc7c7;
+
+  cursor: pointer;
+
+  @include transition;
+}
+
+.slider__item {
+  position: relative;
+
+  display: none;
+  max-height: 594px;
+  height: 58.235vw;
+
+  -webkit-animation: 0.4s ease-in-out;
+          animation: 0.4s ease-in-out;
+
+  border-bottom: 6px solid #ea676b;
+
+  background-color: #f06c64;
+
+  @include media-desktop {
+    border-bottom: 4px solid #ea676b;
+  }
+
+  @include media-tablet {
+    height: 58.6vw;
+
+    border-bottom: 2px solid #ea676b;
+  }
+}
+
+.slider__item_slide2 {
+  border-bottom: 6px solid #5d82e0;
+
+  background-color: #648BF0;
+
+  @include media-desktop {
+    border-bottom: 4px solid #5d82e0;
+  }
+
+  @include media-tablet {
+    border-bottom: 2px solid #5d82e0;
+  }
+}
+
+.slider__active,
+.slider__next {
+  display: flex;
+}
+
+.slider__next {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.to-left {
+  -webkit-animation-name: left;
+          animation-name: left;
+}
+
+.from-right {
+  -webkit-animation-name: right;
+          animation-name: right;
+}
+
+.to-right {
+  -webkit-animation-name: right;
+          animation-name: right;
+  animation-direction: reverse;
+}
+
+.from-left {
+  -webkit-animation-name: left;
+          animation-name: left;
+  animation-direction: reverse;
+}
+
+@-webkit-keyframes left {
+  from {
+    left: 0;
+  }
+  to {
+    left: -100%;
+  }
+}
+
+@keyframes left {
+  from {
+    left: 0;
+  }
+  to {
+    left: -100%;
+  }
+}
+
+@-webkit-keyframes right {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@keyframes right {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+.to-left {
+  -webkit-animation-name: left;
+          animation-name: left;
+}
+
+.from-right {
+  -webkit-animation-name: right;
+          animation-name: right;
+}
+
+.to-right {
+  -webkit-animation-name: right;
+          animation-name: right;
+  animation-direction: reverse;
+}
+
+.from-left {
+  -webkit-animation-name: left;
+          animation-name: left;
+  animation-direction: reverse;
+}
